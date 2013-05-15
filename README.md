@@ -13,6 +13,8 @@ d3.js examples, as well as Jim Vallandingham's
 Installation and Use
 --------------------
 
+__NOTE: Word Cloud Popovers only work in Chrome and Firefox__
+
 Copy the whole directory structure to a server folder. A running server 
 instance is necessary to allow javascript to access the data files. You 
 can either use a hosted server or start a local server in the directory, 
