@@ -230,13 +230,7 @@ function buttonSwitcher() {
 }
 
 //Adds word cloud popovers on the timeline dates
-function wordCounts() {
-  // loads empty popovers for dates without wordclouds
-  $('.tick.major').popover({
-        'content': '<span style="font-style:italic;">insufficient data</span>',
-        'position': 'top',
-        'trigger': 'hover'
-      });
+function wordClouds() {
 
   // parses wordscsv and creates new popovers containing word clouds logscaled to their counts
   d3.csv(wordscsv, function(d) { 
@@ -257,7 +251,10 @@ function wordCounts() {
         }
       } else {
         if (wordcloud != "") {    // ignore empty word clouds to preserve "insufficient data" popovers
-          $('.tick.major:contains("' + lastdate + '")').popover('destroy');
+          if ($('.tick.major:contains("' + lastdate + '")').popover('getData') != null) {
+            $('.tick.major:contains("' + lastdate + '")').popover('destroy');   // delete exiting popovers
+          }
+
           $('.tick.major:contains("' + lastdate + '")').popover({
             'title': lastdate,
             'content': wordcloud,
@@ -270,8 +267,22 @@ function wordCounts() {
         lastdate = d[i].date;
       }
     }
+
+    window.setTimeout(emptyPopovers(), 1);
   });
 }
+
+// Loads empty popovers for dates without wordclouds
+function emptyPopovers() {
+  $.each($('.tick.major'), function () {
+    if ($(this).popover('getData') == null ) {
+      $(this).popover({
+        'content': '<span style="font-style:italic;">insufficient data</span>',
+        'position': 'top',
+        'trigger': 'hover'
+      });
+    }
+  });
 
 // Adds credit span to #description + popover
 function giveCredit() {
@@ -294,6 +305,6 @@ function creditPopover() {
 $(window).load(function() {
   adjustElements();
   buttonSwitcher();
-  wordCounts();
+  wordClouds();
   giveCredit();
 });
