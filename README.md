@@ -16,23 +16,23 @@ Installation and Use
 Copy the whole directory structure to a server folder. A running server 
 instance is necessary to allow javascript to access the data files. You 
 can either use a hosted server or start a local server in the directory, 
-e.g. 'python -m SimpleHTTPServer 8888 &'.
+e.g. `python -m SimpleHTTPServer 8888 &`.
 
 You should change the title and description of the graph in the 
-'aplotter.html' file:
-'''
+`aplotter.html` file:
+```
       <h1 id="title">Title of the Attention Plot</h1>
       <div id="description">
         <p>Description of the graph.</p>
-'''
+```
 
-You should add your own data to the 'data/media.csv' and 'data/words.csv'
-files. It's recommended you use the example data files as templates. You 
+You should add your own data to the `data/media.csv` and `data/words.csv`
+files. It`s recommended you use the example data files as templates. You 
 can also add your own data files to the folder and then change the paths
-in the 'aplotter.js' file.
+in the `aplotter.js` file.
 
-Here's the parameters you can change in the 'aplotter.js' file:
-'''
+Here`s the parameters you can change in the `aplotter.js` file:
+```
 // Path to csv file containing volumes of media by day
 // Column headers should be: date, [media source 1], [media source 2], ...
 // Make sure data is already normalized
@@ -48,14 +48,14 @@ var wordscsv = '../data/words.csv';
 // Dimensions of the graph
 var graphwidth = 2000;
 var graphheight = 400;
-'''
+```
 
 Files
 -----
 
 Files unique to this project are all named aplotter.*:
-* 'aplotter.html'
-* 'css/aplotter.js'
-* 'js/aplotter.js'
+* `aplotter.html`
+* `css/aplotter.js`
+* `js/aplotter.js`
 
-Required libraries are in the 'css/libs' and 'js/libs' folders.
+Required libraries are in the `css/libs` and `js/libs` folders.
