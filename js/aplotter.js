@@ -10,13 +10,13 @@
 // Column headers should be: date, [media source 1], [media source 2], ...
 // Make sure data is already normalized
 // Recommended date format: mmm d
-var mediacsv = '../data/media.csv';
+var mediacsv = 'data/media.csv';
 
 // Path to csv file containing word frequencies by day
 // Column headers should be: date, word, magnitude
 // Dates should be formatted identically to those in media.csv
 // Recommended metric for magnitude: tf-idf
-var wordscsv = '../data/words.csv';
+var wordscsv = 'data/words.csv';
 
 // Dimensions of the graph
 var graphwidth = 2000;
