@@ -27,11 +27,11 @@ You should change the title and description of the graph in the
 ```
 
 You should add your own data to the `data/media.csv` and `data/words.csv`
-files. It`s recommended you use the example data files as templates. You 
+files. It's recommended you use the example data files as templates. You 
 can also add your own data files to the folder and then change the paths
 in the `aplotter.js` file.
 
-Here`s the parameters you can change in the `aplotter.js` file:
+Here's the parameters you can change in the `aplotter.js` file:
 ```
 // Path to csv file containing volumes of media by day
 // Column headers should be: date, [media source 1], [media source 2], ...
