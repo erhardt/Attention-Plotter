@@ -10,10 +10,10 @@ It's based on Mike Bostocks's ["Grouped Bar Chart"](http://bl.ocks.org/mbostock/
 d3.js examples, as well as Jim Vallandingham's 
 ["How to Animate Transitions Between Multiple Charts"](http://flowingdata.com/2013/01/17/how-to-animate-transitions-between-multiple-charts/) tutorial. It uses the [Bootstrap](http://twitter.github.io/bootstrap/), [jQuery](jquery.com), and [jQuery.popover](https://github.com/klaas4/jQuery.popover) libaries.
 
+Live demo of the code: [http://erhardtgraeff.com/demo/aplotter/aplotter.html](http://erhardtgraeff.com/demo/aplotter/aplotter.html)
+
 Installation and Use
 --------------------
-
-__NOTE: Word Cloud Popovers only work in Chrome and Firefox__
 
 Copy the whole directory structure to a server folder. A running server 
 instance is necessary to allow javascript to access the data files. You 
