@@ -274,7 +274,7 @@ function wordClouds() {
 
 // Loads empty popovers for dates without wordclouds
 function emptyPopovers() {
-  $.each($('.tick.major'), function () {
+  $.each($('.tick.major'), function() {
     if ($(this).popover('getData') == null ) {
       $(this).popover({
         'content': '<span style="font-style:italic;">insufficient data</span>',
@@ -283,6 +283,7 @@ function emptyPopovers() {
       });
     }
   });
+}
 
 // Adds credit span to #description + popover
 function giveCredit() {
