@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="Attention Plotter HTML; https://github.com/erhardt/Attention-Plotter">
+  <meta charset="utf-8">
+  <link href="css/libs/bootstrap.min.css" rel="stylesheet">
+  <link href="css/libs/popover.css" rel="stylesheet">
+  <link href="css/aplotter.css" rel="stylesheet">
+  <title>Attention Plotter</title>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="header">
+      <h1 id="title">Title of the Attention Plot</h1>
+      <div id="description">
+        <p>Description of the graph.</p>
+      </div>
+      <div class="btn-group" data-toggle="buttons-radio">
+        <button type="button" id="barbutton" class="btn active switch">Histogram</button>
+        <button type="button" id="linebutton" class="btn switch">Sparklines</button>
+      </div>
+    </div>
+    <div id="vis"></div>
+    <div id="legend">
+      <h4>Legend</h4>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+<script src="js/libs/d3.v3.min.js"></script>
+<script src="js/libs/jquery-2.0.0.min.js"></script>
+<script src="js/libs/jquery.popover-1.1.2.js"></script>
+<script src="js/aplotter.js"></script>
+</body>
+</html>
