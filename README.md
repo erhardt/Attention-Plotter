@@ -57,7 +57,7 @@ Files
 
 Files unique to this project are all named aplotter.*:
 * `aplotter.html`
-* `css/aplotter.js`
+* `css/aplotter.css`
 * `js/aplotter.js`
 
 Required libraries are in the `css/libs` and `js/libs` folders.
